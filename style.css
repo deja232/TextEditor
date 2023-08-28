@@ -21,6 +21,16 @@
     padding: 10px;
     min-height: 200px;
     font-size: 16px;
+    position: relative;
+}
+
+.placeholder {
+    position: absolute;
+    top: 0;
+    left: 12;
+    color: #999;
+    font-size: 20px;
+    font-style: italic;
 }
 
 img {

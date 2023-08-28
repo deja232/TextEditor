@@ -1,8 +1,23 @@
 document.addEventListener("DOMContentLoaded", function () {
     const content = document.querySelector(".content");
     const fontSizeSelect = document.getElementById('fontSize');
+    const placeholderElement = document.querySelector('.placeholder');
+
 
     const textFormattingButtons = document.querySelectorAll('.format-btn[data-format]');
+
+    content.addEventListener('input', function () {
+        if (placeholderElement) {
+            placeholderElement.style.display = 'none';
+        }
+    });
+
+    content.addEventListener('click', function () {
+        if (placeholderElement) {
+            placeholderElement.style.display = 'none';
+        }
+        content.focus();
+    });
 
     // Add event listener to font size select
     fontSizeSelect.addEventListener('change', () => {
